@@ -1,0 +1,12 @@
+name: Subbu solar system
+
+on: [push]
+
+jobs:
+    sample:
+        name: sample job for testing
+        runs-on: ubuntu-latest
+        steps:
+            - name: sample
+              run: echo "ram"
+              
