@@ -7,6 +7,14 @@ jobs:
         name: sample job for testing
         runs-on: ubuntu-latest
         steps:
-            - name: sample
-              run: echo "ram"
-              
+            - name: Checkout the repo
+              uses: actions/checkout@v4
+            - name: list the files
+              run: ls -ltra
+            - name: Setup the node
+              uses: actions/setup-node@v3
+            - name: node version
+              run: |
+                node -v
+                npm -v
+
