@@ -1,6 +1,8 @@
 name: Subbu solar system
 
-on: [push]
+on: 
+    workflow_dispatch: 
+    push: 
 
 jobs:
     sample:
@@ -13,8 +15,9 @@ jobs:
               run: ls -ltra
             - name: Setup the node
               uses: actions/setup-node@v3
-            - name: node version
+            - name: node install the packages
               run: |
-                node -v
-                npm -v
+                node install
+            - name: list the files
+              run: ls -ltra
 
